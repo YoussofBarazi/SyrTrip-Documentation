@@ -1,0 +1,22 @@
+info:
+  name: Get Single Hotel (Public)
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{Host}}/api/hotels/{{id}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: https://syr-trip-backend.vercel.app/
+    - name: id
+      value: adf32895-c1c1-4636-904f-adf8fc846e05
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

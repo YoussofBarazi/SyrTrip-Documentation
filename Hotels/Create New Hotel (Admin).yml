@@ -1,0 +1,40 @@
+info:
+  name: Create New Hotel (Admin)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/hotels"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "ownerEmail": "hotel@example.com",
+        "name": "النواعير",
+        "description": "أسوأ فندق في حماه", // optional
+        "location": "حماه - ساحة العاصي - جانب حلويات سلورة",
+        "lat": 35.656,
+        "lng": 36.254,
+        "phone": "0912345678", 
+        "images": [],
+        "pricePerNight": 35,
+        "isAvailable": true
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: http://localhost:3000
+    - name: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ODhjZjBlNi0xMGE0LTQ1ODYtOWI0My0xNzQ4Y2RmMDViYmIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3ODUxNTEzNDcsImV4cCI6MTc4NTc1NjE0N30.Wyl7hl7fJv-nMQXjmmsIbFcNxmpmAXk91qZUFj1HznY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

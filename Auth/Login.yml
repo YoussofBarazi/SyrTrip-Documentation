@@ -1,0 +1,27 @@
+info:
+  name: Login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "test1@example.com", // test@example.com
+        "password": "12345678" // ******
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: http://localhost:3000
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

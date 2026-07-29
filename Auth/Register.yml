@@ -1,0 +1,30 @@
+info:
+  name: Register
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{Host}}/api/auth/register"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "hotel@example.com", // test@example.com
+        "password": "12345678", // ******
+        "name": "Mohammad Nour", // Mohammad Nour
+        "phone": "0912345678", // 09XXXXXXXX
+        "role": "CUSTOMER" // ['CUSTOMER', 'HOTEL_OWNER', 'CAR_RENTAL_OWNER', 'RESTAURANT_OWNER', 'Admin']
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: http://localhost:3000
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

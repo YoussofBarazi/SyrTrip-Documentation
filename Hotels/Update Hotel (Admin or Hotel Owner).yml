@@ -1,0 +1,41 @@
+info:
+  name: Update Hotel (Admin or Hotel Owner)
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{Host}}/api/hotels/{{id}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+      //   "name": "أفاميا",
+      //   "description": "",
+      //   "location": "حماه - جانب قيادة الشرطة"
+      //   "lat": 35.656,
+      //   "lng": 36.254,
+      //   "phone": "", 
+      //   "images": [],
+      //   "pricePerNight": 35,
+      //   "isAvailable": true
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: https://syr-trip-backend.vercel.app/
+    - name: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ODhjZjBlNi0xMGE0LTQ1ODYtOWI0My0xNzQ4Y2RmMDViYmIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3ODUxNTEzNDcsImV4cCI6MTc4NTc1NjE0N30.Wyl7hl7fJv-nMQXjmmsIbFcNxmpmAXk91qZUFj1HznY
+    - name: id
+      value: adf32895-c1c1-4636-904f-adf8fc846e05
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

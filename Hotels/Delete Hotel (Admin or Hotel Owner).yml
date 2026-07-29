@@ -1,0 +1,27 @@
+info:
+  name: Delete Hotel (Admin or Hotel Owner)
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: "{{Host}}/api/hotels/{{id}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: https://syr-trip-backend.vercel.app/
+    - name: id
+      value: adf32895-c1c1-4636-904f-adf8fc846e05
+    - name: token
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ODhjZjBlNi0xMGE0LTQ1ODYtOWI0My0xNzQ4Y2RmMDViYmIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3ODUxNTEzNDcsImV4cCI6MTc4NTc1NjE0N30.Wyl7hl7fJv-nMQXjmmsIbFcNxmpmAXk91qZUFj1HznY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

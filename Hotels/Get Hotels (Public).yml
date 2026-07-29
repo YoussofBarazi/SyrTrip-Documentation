@@ -1,0 +1,33 @@
+info:
+  name: Get Hotels (Public)
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{Host}}/api/hotels"
+  params:
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "10"
+      type: query
+      disabled: true
+    - name: search
+      value: '""'
+      type: query
+      disabled: true
+  auth: inherit
+
+runtime:
+  variables:
+    - name: host
+      value: https://syr-trip-backend.vercel.app/
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

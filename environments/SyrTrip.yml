@@ -1,0 +1,6 @@
+name: SyrTrip
+variables:
+  - name: Host
+    value: https://syr-trip-backend.vercel.app/
+  - name: Token
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ODhjZjBlNi0xMGE0LTQ1ODYtOWI0My0xNzQ4Y2RmMDViYmIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3ODUyODU2NDAsImV4cCI6MTc4NTg5MDQ0MH0.fd9Zxk8JG41VUV2YM6SpbK1yYr-PfGJGPCEVkbhLdDM
