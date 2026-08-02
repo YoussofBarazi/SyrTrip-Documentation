@@ -1,0 +1,30 @@
+info:
+  name: Create New Car Office (Admin)
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{Host}}/api/offices"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "ownerEmail": "office1@example.com", // 
+        "name": "Al-Sabuneyah", //
+        "description": "", // optional
+        "location": "Hama", //
+        "lat": 35.25463, // number
+        "lng": 36.52546, // number
+        "phone": "0951763256" // 
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

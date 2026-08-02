@@ -1,0 +1,20 @@
+info:
+  name: Get Single Car Office (Public)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{Host}}/api/offices/{{officeId}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: officeId
+      value: b6fadaa0-439f-46f5-9e5e-c62d902b42a1
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

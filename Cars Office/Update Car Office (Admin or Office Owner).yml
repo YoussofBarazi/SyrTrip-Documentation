@@ -1,0 +1,34 @@
+info:
+  name: Update Car Office (Admin or Office Owner)
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{Host}}/api/offices/{{officeId}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "مكتب الصابونية للسيارات" //
+      //   "description": "", //
+      //   "location": "", //
+      //   "lat": 0, // number
+      //   "lng": 0, // number
+      //   "phone": "" // 
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: officeId
+      value: b6fadaa0-439f-46f5-9e5e-c62d902b42a1
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

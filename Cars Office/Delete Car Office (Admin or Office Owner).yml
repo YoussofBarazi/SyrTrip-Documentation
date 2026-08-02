@@ -1,0 +1,23 @@
+info:
+  name: Delete Car Office (Admin or Office Owner)
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{Host}}/api/offices/{{officeId}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  auth: inherit
+
+runtime:
+  variables:
+    - name: officeId
+      value: a2f1ed05-3bbc-49e9-823d-c75d93b2faad
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
