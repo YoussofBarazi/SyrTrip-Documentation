@@ -1,0 +1,21 @@
+info:
+  name: Get Cars (Public)
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{Host}}/api/cars"
+  params:
+    - name: search
+      value: ""
+      type: query
+      description: For car type or name
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

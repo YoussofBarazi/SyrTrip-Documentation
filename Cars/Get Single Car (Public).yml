@@ -1,0 +1,20 @@
+info:
+  name: Get Single Car (Public)
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{Host}}/api/cars/{{carId}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: carId
+      value: bfcc960d-e8ec-4784-b341-3ff33db6405b
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,34 @@
+info:
+  name: Create New Car (Admin or Office Owner)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/cars/{{officeId}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "كيا ريو", //
+        "type": "SEDAN", // ['SEDAN', 'SUV', 'HATCHBACK', 'CONVERTIBLE', 'COUPE', 'MINIVAN', 'PICKUP_TRUCK', 'STATION_WAGON']
+        "color": "أسود",
+        "pricePerDay": 10, // number
+        "images": [], // empty by default
+        "isAvailable": true // optional - true by default
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: officeId
+      value: b6fadaa0-439f-46f5-9e5e-c62d902b42a1
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,34 @@
+info:
+  name: Updae Car (Admin or Office Owener)
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{Host}}/api/cars/{{carId}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "BYD Destroyer" //
+      //   "type": "", // ['SEDAN', 'SUV', 'HATCHBACK', 'CONVERTIBLE', 'COUPE', 'MINIVAN', 'PICKUP_TRUCK', 'STATION_WAGON']
+      //   "color": "",
+      //   "pricePerDay": "",
+      //   "images": [],
+      //   "isAvailable": true
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: carId
+      value: bfcc960d-e8ec-4784-b341-3ff33db6405b
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
