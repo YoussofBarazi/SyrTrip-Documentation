@@ -1,0 +1,29 @@
+info:
+  name: Create a Landmark (Admin)
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{Host}}/api/landmarks"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "قلعة حلب", //
+        "description": "قلعة أثرية عمرها 1500 عام", //
+        "location": "حلب", //
+        "lat": 35.265, // number
+        "lng": 36.354, // number
+        "images": [] // empty array by default
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

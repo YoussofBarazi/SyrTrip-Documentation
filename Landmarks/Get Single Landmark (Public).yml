@@ -1,0 +1,20 @@
+info:
+  name: Get Single Landmark (Public)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{Host}}/api/landmarks/{{landmark_id}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: landmark_id
+      value: b35be7b7-3a2a-4fad-a831-1f349018b112
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

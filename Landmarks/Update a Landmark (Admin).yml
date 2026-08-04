@@ -1,0 +1,34 @@
+info:
+  name: Update a Landmark (Admin)
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{Host}}/api/landmarks/{{landmark_id}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "قلعة حلب الأثرية" //
+      //   "description": "", //
+      //   "location": "", //
+      //   "lat": 35.265, // number
+      //   "lng": 36.354, // number
+      //   "images": [] // empty array by default
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: landmark_id
+      value: b35be7b7-3a2a-4fad-a831-1f349018b112
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

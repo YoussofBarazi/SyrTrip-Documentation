@@ -1,0 +1,39 @@
+info:
+  name: Update An Event (Admin)
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{Host}}/api/events/{{event_id}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "المعرض الدولي للذكاء الاصطناعي-الموسم الثاني"
+      //   "type": "علمي",
+      //   "description": "الموسم الثاني من المعرض",
+      //   "startDate": "2026-09-01",
+      //   "endDate": "2026-09-05",
+      //   "time": "09:00",
+      //   "price": 0,
+      //   "location": "حماه",
+      //   "lat": 35.234,
+      //   "lng": 36.354,
+      //   "images": []
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: event_id
+      value: b6661206-bbfe-4e40-984b-01d39fd1ca01
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

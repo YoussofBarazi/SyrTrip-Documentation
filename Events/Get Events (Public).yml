@@ -1,0 +1,34 @@
+info:
+  name: Get Events (Public)
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{Host}}/api/events"
+  params:
+    - name: page
+      value: "1"
+      type: query
+      disabled: true
+    - name: limit
+      value: "10"
+      type: query
+      disabled: true
+    - name: search
+      value: ""
+      type: query
+      description: search for event name, location or type
+      disabled: true
+    - name: upcoming
+      value: "false"
+      type: query
+      description: get only upcoming events
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
