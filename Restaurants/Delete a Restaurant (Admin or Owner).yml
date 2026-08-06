@@ -1,0 +1,18 @@
+info:
+  name: Delete a Restaurant (Admin or Owner)
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{Host}}/api/restaurant/{{restaurant_id}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

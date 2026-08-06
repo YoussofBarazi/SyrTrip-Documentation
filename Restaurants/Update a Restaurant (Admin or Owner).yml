@@ -1,0 +1,36 @@
+info:
+  name: Update a Restaurant (Admin or Owner)
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{Host}}/api/restaurants/{{restaurant_id}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Naranj"
+      //   "description": "Authentic Syrian fine dining located in the heart of Old Damascus.",
+      //   "location": "Damascus",
+      //   "lat": 33.5102,
+      //   "lng": 36.3089,
+      //   "phone": "+963112233445",
+      //   "images": [],
+      //   "isAvailable": true
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: restaurant_id
+      value: 3a257d86-e5cb-4117-99d4-4fe7de65b4fc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -10,11 +10,10 @@ http:
     type: json
     data: |-
       {
-        "email": "office1@example.com", // test@example.com
+        "email": "restaurant@example.com", // test@example.com
         "password": "12345678", // ******
         "name": "Mohammad Nour", // Mohammad Nour
-        "phone": "0912345678", // 09XXXXXXXX
-        "role": "CUSTOMER" // ['CUSTOMER', 'HOTEL_OWNER', 'CAR_RENTAL_OWNER', 'RESTAURANT_OWNER', 'Admin']
+        "phone": "0912345678" // +9639XXXXXXXX
       }
   auth: inherit
 

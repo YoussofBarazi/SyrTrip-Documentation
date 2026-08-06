@@ -1,5 +1,5 @@
 info:
-  name: Create New Car (Admin or Office Owner)
+  name: Create New Car (Admin)
   type: http
   seq: 1
 

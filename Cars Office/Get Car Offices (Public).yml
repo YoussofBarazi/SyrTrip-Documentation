@@ -10,7 +10,6 @@ http:
     - name: search
       value: ""
       type: query
-      description: Search for office using name
       disabled: true
   auth: inherit
 

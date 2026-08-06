@@ -1,0 +1,32 @@
+info:
+  name: Create a Restaurant (ADMIN)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/restaurants"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "ownerEmail": "restaurant@example.com",
+        "name": "Naranj Restaurant",
+        "description": "Authentic Syrian fine dining located in the heart of Old Damascus.",
+        "location": "Straight Street, Old Damascus",
+        "lat": 33.5102,
+        "lng": 36.3089,
+        "phone": "+963112233445",
+        "images": [],
+        "isAvailable": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
