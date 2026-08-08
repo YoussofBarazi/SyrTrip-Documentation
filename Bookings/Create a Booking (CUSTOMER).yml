@@ -16,7 +16,7 @@ http:
 
       {
         "itemType": "HOTEL",
-        "hotelId": "hotel-uuid-here",
+        "hotelId": "a0824853-271d-43db-9065-2ea6986a784c",
         "startDate": "2026-08-10T14:00:00.000Z", // Check-in date
         "endDate": "2026-08-13T10:00:00.000Z"   // Check-out date
       }
