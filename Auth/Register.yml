@@ -10,7 +10,7 @@ http:
     type: json
     data: |-
       {
-        "email": "restaurant@example.com", // test@example.com
+        "email": "customer@example.com", // test@example.com
         "password": "12345678", // ******
         "name": "Mohammad Nour", // Mohammad Nour
         "phone": "0912345678" // +9639XXXXXXXX

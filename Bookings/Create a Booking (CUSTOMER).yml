@@ -1,0 +1,42 @@
+info:
+  name: Create a Booking (CUSTOMER)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/bookings"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      // Booking a hotel
+
+      {
+        "itemType": "HOTEL",
+        "hotelId": "hotel-uuid-here",
+        "startDate": "2026-08-10T14:00:00.000Z", // Check-in date
+        "endDate": "2026-08-13T10:00:00.000Z"   // Check-out date
+      }
+
+      // Booking a car
+
+      // {
+      //   "itemType": "CAR",
+      //   "carId": "car-uuid-here",
+      //   "startDate": "2026-08-10T09:00:00.000Z", // Pickup date & time
+      //   "endDate": "2026-08-12T09:00:00.000Z"   // Drop-off date & time
+      // }
+
+      // Booking a restaurant
+
+      // 0
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -11,6 +11,11 @@ http:
       value: Bearer {{Token}}
   auth: inherit
 
+runtime:
+  variables:
+    - name: restaurant_id
+      value: 3a257d86-e5cb-4117-99d4-4fe7de65b4fc
+
 settings:
   encodeUrl: true
   timeout: 0

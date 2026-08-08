@@ -1,0 +1,29 @@
+info:
+  name: Update Booking Status (All Roles)
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{Host}}/api/bookings/{{booking_id}}/status"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "status": "APPROVED" // ['APPROVED', 'REJECTED', 'CANCELLED']
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: booking_id
+      value: b218f708-089f-48f2-8e85-449dfd5ccaa7
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

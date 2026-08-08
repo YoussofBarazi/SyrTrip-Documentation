@@ -2,7 +2,10 @@ name: SyrTrip
 variables:
   - name: Host
     value: https://syr-trip-backend.vercel.app/
+    description: ""
   - name: Token
-    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ODhjZjBlNi0xMGE0LTQ1ODYtOWI0My0xNzQ4Y2RmMDViYmIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3ODU2NjExMjIsImV4cCI6MTc4NjI2NTkyMn0.fZ4g0QVncykhakUAnEprFey6-iYrJu4e_iJDxOQ5I1U
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ0ZjA1NC03YTQzLTQzOWEtYmIxZi1hNTU0NzBkYTc5YTYiLCJyb2xlIjoiQ1VTVE9NRVIiLCJpYXQiOjE3ODYyMDAyMjUsImV4cCI6MTc4NjgwNTAyNX0.Jq3UBwwHSwS01oFnbj32GR4TqijvBTaW7ggNGz8MdIo
+    description: ""
   - name: local
     value: http://localhost:3000
+    description: ""
