@@ -1,0 +1,26 @@
+info:
+  name: Upload an Image (All Roles)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/upload"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - C:\Users\user\Downloads\TerraLogo.png
+        contentType: image/png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
