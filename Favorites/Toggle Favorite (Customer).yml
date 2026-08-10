@@ -1,0 +1,25 @@
+info:
+  name: Toggle Favorite (Customer)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/interactions/favorites/toggle"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "itemType": "HOTEL", // ["HOTEL", "CAR", "RESTAURANT", "LANDMARK", and "EVENT"]
+        "itemId": "30d47c70-f531-4ce2-bde5-369c70d31bd6"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

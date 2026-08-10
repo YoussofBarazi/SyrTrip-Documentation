@@ -1,0 +1,24 @@
+info:
+  name: Get Item Reviews (Public)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{Host}}/api/interactions/reviews?itemType=HOTEL&itemId=30d47c70-f531-4ce2-bde5-369c70d31bd6"
+  params:
+    - name: itemType
+      value: HOTEL
+      type: query
+      description: '"HOTEL" | "CAR" | "RESTAURANT" | "LANDMARK" | "EVENT"'
+    - name: itemId
+      value: 30d47c70-f531-4ce2-bde5-369c70d31bd6
+      type: query
+      description: Item id
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

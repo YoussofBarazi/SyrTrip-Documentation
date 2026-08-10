@@ -1,0 +1,18 @@
+info:
+  name: Get My Favorites (Customer)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{Host}}/api/interactions/favorites/me"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
