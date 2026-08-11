@@ -1,0 +1,24 @@
+info:
+  name: Register Android Device Token (FCM)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{Host}}/api/notifications/fcm-token"
+  headers:
+    - name: Authorization
+      value: Bearer {{Token}}
+  body:
+    type: json
+    data: |-
+      {
+        "fcmToken": "eXamPleT0k3n_From_F1reb4se_SDK_..."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
